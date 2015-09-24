@@ -1,6 +1,14 @@
  ## Additional frameworks as well as specific build or deploy instructions should be described 
  
-1. Spring Boot Application can be started by running mvn spring-boot:run im parent directory
+1. Spring Boot Application can be started by running 
+
+	mvn spring-boot:run 
+	
+im regis24-test-application project
+(first package regis24-test-persistence.jar by running 
+"mvn clean package" under /regis24-test-persistence dir,
+than mvn clean package under root dir)
+
 or by building jar and runnig it with java -jar command
 
 2. SQL scripts are under /regis24-test-persistence/src/test/resources/sql
