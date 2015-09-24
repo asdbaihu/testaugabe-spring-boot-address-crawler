@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.regis24.test</groupId>
+		<artifactId>regis24-test-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>regis24-test-persistence</artifactId>
+
+	<properties>
+		<hibernate.version>4.1.0.Final</hibernate.version>
+		<postgres.version>9.2-1003-jdbc4</postgres.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>1.9.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgres.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources/conf</directory>
+				<targetPath>conf</targetPath>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.xml</include>
+					<include>*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources/conf</directory>
+				<targetPath>conf</targetPath>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.xml</include>
+					<include>*.properties</include>
+				</includes>
+			</testResource>
+<!-- 			<testResource> -->
+<!-- 				<directory>src/test/resources</directory> -->
+<!-- 			</testResource> -->
+		</testResources>
+		<!-- <plugins> -->
+		<!-- <plugin> -->
+		<!-- <groupId>org.apache.maven.plugins</groupId> -->
+		<!-- <artifactId>maven-compiler-plugin</artifactId> -->
+		<!-- <version>3.3</version> -->
+		<!-- <configuration> -->
+		<!-- <source>1.7</source> -->
+		<!-- <target>1.7</target> -->
+		<!-- </configuration> -->
+		<!-- </plugin> -->
+		<!-- </plugins> -->
+	</build>
+</project>

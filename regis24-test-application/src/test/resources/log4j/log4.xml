@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+	      <param name="ConversionPattern" value="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+	    </layout>
+    </appender>
+
+    <appender name="regis24.log" class="org.apache.log4j.DailyRollingFileAppender">
+<!--         <param name="File" value="${catalina.home}/logs/application.log"/> -->
+        <param name="File" value="/logs/application.log"/>
+        <param name="DatePattern" value="yyyy-MM-dd"/>
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+	      <param name="ConversionPattern" value="%c{1} - %m%n"/>
+	    </layout>
+    </appender>
+    
+    <category name="de.regis24">
+        <priority value="error"/>
+    </category>
+
+    <!-- Set default log level and appenders ... -->
+    <root>
+        <priority value="debug"/>
+        <appender-ref ref="application.log"/>
+    </root>
+</log4j:configuration>
