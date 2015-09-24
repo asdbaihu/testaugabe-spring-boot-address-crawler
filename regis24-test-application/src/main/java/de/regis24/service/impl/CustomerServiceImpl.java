@@ -1,7 +1,6 @@
 package de.regis24.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import de.regis24.persistence.dao.GenericDao;

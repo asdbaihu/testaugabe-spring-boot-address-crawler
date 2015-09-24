@@ -6,12 +6,10 @@ import org.hibernate.HibernateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 import de.regis24.persistence.dao.CustomerDao;
-import de.regis24.persistence.dao.GenericDao;
 import de.regis24.persistence.model.Customer;
 
 /**
